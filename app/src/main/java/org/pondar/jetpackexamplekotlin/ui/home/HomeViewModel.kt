@@ -18,6 +18,6 @@ class HomeViewModel : ViewModel() {
     //called when viewmodel is destroyed
     override fun onCleared() {
         super.onCleared()
-        //save data locally - the
+        //save data locally
     }
 }

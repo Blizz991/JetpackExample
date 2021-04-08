@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.navArgs
+import kotlinx.android.synthetic.main.logged_in_fragment.*
 import org.pondar.jetpackexamplekotlin.R
 import org.pondar.jetpackexamplekotlin.ui.home.HomeViewModel
 
@@ -23,6 +24,7 @@ class LoggedInFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         return inflater.inflate(R.layout.logged_in_fragment, container, false)
     }
 
@@ -35,6 +37,9 @@ class LoggedInFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(LoggedInViewModel::class.java)
         // TODO: Use the ViewModel
         Log.d("LoggedInFragment", "user = ${args.user}")
+        logged_in_textview.text = "Logged in as ${args.user.email}"
+
+
 
     }
 

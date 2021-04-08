@@ -6,6 +6,7 @@
     tools:context=".ui.loggedin.LoggedInFragment">
 
     <TextView
+        android:id="@+id/logged_in_textview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="This is your account. You are logged in now" />
