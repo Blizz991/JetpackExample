@@ -37,7 +37,7 @@ class LoggedInFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(LoggedInViewModel::class.java)
         // TODO: Use the ViewModel
         Log.d("LoggedInFragment", "user = ${args.user}")
-        logged_in_textview.text = "Logged in as ${args.user.email}"
+        logged_in_textview.text = "Logged in as ${args.user.fullName} with email: ${args.user.email}"
 
 
 

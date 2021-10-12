@@ -2,6 +2,7 @@ package org.pondar.jetpackexamplekotlin.ui.account
 
 import android.R.attr.data
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,8 +48,9 @@ class AccountFragment : Fragment() {
             if (it==true)
             {
                 //without any parameters just use the ID
-               // findNavController().navigate(R.id.action_nav_account_to_loggedInFragment)
+               // findNavController().navigate(R.id.action_nav_account_to_loggedInFragment
 
+                Log.d("user login",viewmodel.user.toString())
                 val action = AccountFragmentDirections.actionNavAccountToLoggedInFragment(viewmodel.user)
                 findNavController().navigate(action)
                 //with parameters use the two lines above
